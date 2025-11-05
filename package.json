@@ -1,0 +1,28 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "This is Nmasthe React",
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jst"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaranyaShynu/React-1.git"
+  },
+  "keywords": [],
+  "author": "Saranya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaranyaShynu/React-1/issues"
+  },
+  "homepage": "https://github.com/SaranyaShynu/React-1#readme",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "browserlist":[
+    "last 2 versions"
+  ]
+}
