@@ -8,7 +8,7 @@ const RestaurantMenu = ()=>{
 const [resInfo, setResInfo]=useState(null)
 
 const {resId} = useParams()
-console.log(params)
+console.log(resId)
 
 useEffect(()=>{
     fetchMenu()
@@ -23,10 +23,9 @@ const fetchMenu = async ()=>{
 if(resInfo==null)
      return   <Shimmer />
 const {name, cuisines, costForTwoMessage}=resInfo?.cards[0]?.card?.info
-const {itemCards} = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
+const itemCards = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards || []
 console.log(itemCards)
-    return 
-    (
+    return (
         <div className="menu">
             <h1>{name}</h1>
             <p>{cuisines.join(",")} - {costForTwoMessage}</p>

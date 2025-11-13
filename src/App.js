@@ -17,18 +17,12 @@ const styleCard ={
 }
 
 const AppLayout = () =>{
-    console.log(<Body />)
+   // console.log(<Body />)
    // React.createElement("h1",{}) => React Element
     return (
         <div className="app">
           <Header />
           <Outlet />
-          {/** if path = / */}
-          <Body />
-          {/** if path = /about */}
-          <About />
-          {/** if path = /contact */}
-          <Contact />
         </div>
     )
 }

@@ -19,7 +19,7 @@ useEffect(()=>{
     [])
     const fetchData = async () =>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=D")
-        const json=await data.json
+        const json=await data.json()
         console.log(json)
         setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards)
         setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards)
@@ -40,19 +40,19 @@ useEffect(()=>{
                         //searchText
                         console.log(searchText)
                         const filteredRestaurant=listOfRestaurants.filter(
-                            (res)=>res.data.name.includes==searchText)
+                            (res)=>res.data.name.toLowerCase().includes==searchText.toLowerCase())
                      
-                     setListOfRestaurants(filteredRestaurant)
+                     setFilteredRestaurant(filteredRestaurant)
                      }} > Search</button>
                 </div>
-            <button className="filter-btn" onClick={()=>{setListOfRestaurants()
+            <button className="filter-btn" onClick={()=>{
                const filteredList=listOfRestaurants.filter(
                 (res)=>res.data.avgRating>4)
-               setListOfRestaurants(filteredList)
+               setFilteredRestaurant(filteredList)
             }}
               >
             Top Rated restaurants</button>
-            </div>
+            </div>s
             <div className="res-container">
                 {
                     filteredRestaurant.map(restaurant=>(<Link key={restaurant.data.id} to={"/restaurants/" + restaurant.data.id}><RestaurantCard key={restaurant.data.id} resData={restaurant}/></Link>)
