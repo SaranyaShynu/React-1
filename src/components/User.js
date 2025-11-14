@@ -1,6 +1,15 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 const User =(props)=>{
     const [count]=useState(0)
+
+useEffect(()=>{
+    //API Calls
+}, [])
+
+async function getUserInfo() {
+    
+}
+
     return (
         <div className="user-card">
             <h1>Count:{count}</h1>
