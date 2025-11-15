@@ -7,7 +7,9 @@ import Contact from "./components/Contact"
 //import Error from "./components/Error"
 import RestaurantMenu from "./components/RestaurantMenu"
 import { createBrowserRouter , RouterProvider , Outlet} from "react-router-dom"
-
+// chunking
+//code splitting
+//dynamic bundling
 // React.createElement => Object => HTMLElement(render)
 // JSX => Babel transpiles it to React.createElement => ReactElement-JS Object=> HTML Element(render)
 

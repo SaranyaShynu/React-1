@@ -28,6 +28,10 @@ class UserClass extends React.Component {
     console.log("component Did Update")
    }
 
+   componentWillUnmount (){
+    console.log("Component Will Unmount")
+   }
+
    render() {
     console.log("Child Constructor")
     return (
@@ -50,3 +54,18 @@ class UserClass extends React.Component {
 }
 
 export default UserClass
+
+/*
+MOUNTING
+  Constructor (dummy)
+  Render (dummy)
+    <HTML Dummy>
+Component Did Mount
+    <API Call>
+    <this.setState> -> State variable is updated
+
+UPDATE
+   render(API data)
+   <HTML (new API data)
+   component Did Update
+*/
