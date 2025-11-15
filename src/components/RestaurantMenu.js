@@ -2,7 +2,7 @@ import React from "react"
 import { useState , useEffect } from "react"
 import Shimmer from "./Shimmer"
 import { useParams } from "react-router-dom"
-import { useRestaurantMenu } from "../utils/useRestaurantMenu"
+import useRestaurantMenu from "../utils/useRestaurantMenu"
 const RestaurantMenu = ()=>{
 
 //const [resInfo, setResInfo]=useState(null)
