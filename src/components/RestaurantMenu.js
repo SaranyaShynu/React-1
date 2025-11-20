@@ -22,10 +22,11 @@ const fetchMenu = async ()=>{
 
 if(resInfo==null)
      return   <Shimmer />
-const {name, cuisines, costForTwoMessage}=resInfo?.cards[0]?.card?.info
-const itemCards = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards || []
-console.log(itemCards)
-    return (
+const {name, cuisines, costForTwoMessage}=resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+const {itemCards} = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards || []
+console.log(resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
+const categories=resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter ()   
+return (
         <div className="menu">
             <h1>{name}</h1>
             <p>{cuisines.join(",")} - {costForTwoMessage}</p>

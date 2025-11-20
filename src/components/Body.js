@@ -56,7 +56,7 @@ useEffect(()=>{
             }}
               >
             Top Rated restaurants</button>
-            </div>s
+            </div>
             <div className="res-container">
                 {
                     filteredRestaurant.map(restaurant=>(<Link key={restaurant.data.id} to={"/restaurants/" + restaurant.data.id}><RestaurantCard key={restaurant.data.id} resData={restaurant}/></Link>)
